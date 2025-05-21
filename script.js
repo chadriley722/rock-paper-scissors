@@ -34,11 +34,20 @@ function playGame() {
         }
     }
     
-    // Play 5 rounds
-    for (let round = 1; round <= 5; round++) {
+    let round = 1;
+    let playing = true;
+    
+    while (playing) {
         console.log(`\nRound ${round}:`);
         
         const humanSelection = getHumanChoice();
+        
+        // Allow user to quit the game
+        if (humanSelection === 'quit' || humanSelection === 'exit') {
+            playing = false;
+            break;
+        }
+        
         const computerSelection = getComputerChoice();
         
         console.log(`You chose: ${humanSelection}`);
@@ -55,6 +64,7 @@ function playGame() {
         }
         
         console.log(`Current Score - You: ${humanScore}, Computer: ${computerScore}`);
+        round++;
     }
     
     // Announce final winner
