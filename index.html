@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .buttons {
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #game-log {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            min-height: 200px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+            background-color: #f9f9f9;
+        }
+        #score {
+            font-weight: bold;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
+    <h1>Rock Paper Scissors</h1>
+    
+    <div class="buttons">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
+    
+    <div id="score">Score: You 0 - Computer 0</div>
+    
+    <div id="game-log">
+        <p>Choose rock, paper, or scissors to start the game!</p>
+    </div>
+    
+    <button id="new-game" style="display: none; margin-top: 20px; padding: 10px 20px; font-size: 18px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Start New Game!</button>
+    
     <script src="script.js"></script>
 </body>
 </html>
